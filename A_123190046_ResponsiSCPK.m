@@ -57,7 +57,7 @@ handles.output = hObject;
 opts = detectImportOptions('DATA RUMAH.xlsx');
 opts.SelectedVariableNames = [1,3,4,5,6,7,8];
 data = readmatrix('DATA RUMAH.xlsx', opts); %membaca file DATA RUMAH.xlsx kolom 1,3,4,5,6,7,8
-set(handles.tabel, 'Data', data);
+set(handles.tabel, 'Data', data); %mengatur value tabel data
 
 % Update handles structure
 guidata(hObject, handles);
@@ -83,7 +83,7 @@ function proses_Callback(hObject, eventdata, handles)
 % eventdata  reserved - to be defined in a future version of MATLAB
 % handles    structure with handles and user tabel (see GUIDATA)
 w = [0.3,0.2,0.23,0.1,0.07,0.1]; %bobot kriteria
-k = [0, 1, 1, 1, 1, 1]; %jenis kriteria (1 untuk keuntungan, 0 untuk kerugian)
+k = [0, 1, 1, 1, 1, 1]; %jenis kriteria (1 untuk keuntungan, 0 untuk biaya)
 opts = detectImportOptions('DATA RUMAH.xlsx');
 opts.SelectedVariableNames = [3,4,5,6,7,8];
 data = readmatrix('DATA RUMAH.xlsx', opts); %membaca file DATA RUMAH.xlsx
